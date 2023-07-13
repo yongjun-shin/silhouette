@@ -1,3 +1,20 @@
 body {
     background-image: url('../imgs/b1.png');
 }
+
+.first {
+    display: flex;
+    width: 360px;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.first .menu {
+    cursor: pointer;
+}
+.first .title {
+    font-size: 80px;
+    font-family: 'Allura';
+}

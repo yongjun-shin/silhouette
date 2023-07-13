@@ -7,11 +7,17 @@
     <title>Silhouette</title>
 
     <base href="/">
-
-    <link rel="icon" href="../static/imgs/logo.ico" type="image/x-icon">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=PT+Sans&family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'imgs/logo.ico' %}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
 </head>
 <body>
-    안녕
+    <header>
+        <div class="first">
+            <img class="menu" src="{% static 'imgs/menu.svg' %}" alt="menu" >
+            <p class="title">Silhouette</p>
+        </div>
+    </header>
 </body>
 </html>
