@@ -10,7 +10,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=PT+Sans&family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="icon" href="{% static 'imgs/logo.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 </head>
 <body>
     <header>
@@ -43,8 +43,8 @@
             </div>
             <div class="main">
                 <nav class="navi">
-                    <a class="nav_txt" href="/login/">Login</a>
-                    <a class="nav_txt" href="/join/">Join</a>
+                    <a class="nav_txt" href="login">Login</a>
+                    <a class="nav_txt" href="join">Join</a>
                 </nav>
                 <div class="second">
                     <div>
@@ -55,6 +55,6 @@
             </div>
         </div>
     </header>
-    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    {% comment %} <script type="text/javascript" src="{% static 'js/login.js' %}"></script> {% endcomment %}
 </body>
 </html>
