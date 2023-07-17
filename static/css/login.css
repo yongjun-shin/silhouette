@@ -108,31 +108,22 @@ body {
     width: 650px;
     margin-left: 300px;
 }
-.second .email {
+.second .txt {
     width: 428px;
     background: none;
     border: none;
     color: #353434;
-    font-family: PT Serif;
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-.second .pw {
-    width: 428px;
-    background: none;
-    border: none;
-    color: #353434;
-    font-family: PT Serif;
+    font-family: 'PT Serif';
     font-size: 25px;
     margin-bottom: 15px;
 }
 .second .btn {
-    width: 244px;
-    height: 85px;
+    width: 220px;
+    height: 70px;
     border-radius: 14px;
     border: 1px solid #353434;
     color: #353434;
-    font-family: PT Serif;
+    font-family: 'PT Serif';
     font-size: 28px;
     background: none;
     cursor: pointer;
