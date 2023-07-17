@@ -8,7 +8,8 @@ def index(request):
 
 urlpatterns = [
     path('', index),
-     path('login/', views.login_view, name='login'),
+    path('login/', views.login_view, name='login'),
+    path('join/', views.join_view, name='join'),
     path("admin/", admin.site.urls),
 ]
 

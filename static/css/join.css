@@ -102,54 +102,17 @@ body {
 
 .second {
     margin-top: 240px;
-    font-family: 'PT Serif';
 }
 .second > div {
     width: 650px;
     margin-left: 300px;
 }
-.second .email {
-    width: 428px;
-    background: none;
-    border: none;
-    color: #353434;
-    font-family: PT Serif;
-    font-size: 25px;
-    margin-bottom: 15px;
+.second .body_txt {
+    font-family: 'PT Serif';
+    font-size: 42px;
+    text-align: center;
+    color: #565555;
 }
-.second .pw {
-    width: 428px;
-    background: none;
-    border: none;
-    color: #353434;
-    font-family: PT Serif;
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-.second .btn {
-    width: 244px;
-    height: 85px;
-    border-radius: 14px;
-    border: 1px solid #353434;
-    color: #353434;
-    font-family: PT Serif;
-    font-size: 28px;
-    background: none;
-    cursor: pointer;
-    margin-top: 40px;
-}
-.second .btn:hover {
-    font-weight: bold;
-    border: 2px solid #353434;
-}
-.second .form_line {
-    width: 448px;
-    height: 1px;
-    background: #353434;
-    margin-bottom: 56px;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
+.second .body_txt span{
+    font-family: 'Allura';
 }

@@ -43,18 +43,39 @@
             </div>
             <div class="main">
                 <nav class="navi">
-                    <a class="nav_txt" href="login">Login</a>
-                    <a class="nav_txt" href="join">Join</a>
+                    <a class="nav_txt" href="{% url 'login' %}">Login</a>
+                    <a class="nav_txt" href="{% url 'join' %}">Join</a>
                 </nav>
                 <div class="second">
                     <div>
-                        <p class="body_txt">“Make your day more beautiful.”</p>
-                        <p class="body_txt">with <span>Silhouette</span></p>
+                        <form method="post">
+                            <div>
+                                <div class="center">
+                                    <input class="email" type="email" placeholder="E-mail"/>
+                                </div>
+                                <div class="center">
+                                    <div class="form_line"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="center">
+                                    <input class="pw" type="password" placeholder="Password"/>
+                                </div>
+                                <div class="center">
+                                    <div class="form_line"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="center">
+                                    <input class="btn" type="submit" value="Login" />
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    {% comment %} <script type="text/javascript" src="{% static 'js/login.js' %}"></script> {% endcomment %}
+    <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
 </body>
 </html>
