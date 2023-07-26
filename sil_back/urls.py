@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.shortcuts import render
 from . import views
@@ -9,7 +10,9 @@ def index(request):
 urlpatterns = [
     path('', index),
     path('login/', views.login_view, name='login'),
-    path('join/', views.join_view, name='join'),
+    path('join/', include('user.urls')),  # user 앱의 urls.py를 include
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('mypage/', views.mypage_view, name='mypage'),
     path("admin/", admin.site.urls),
 ]
 

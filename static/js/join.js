@@ -8,3 +8,27 @@ checkBtn.addEventListener('change', function() {
         menuIcon.src = "/static/imgs/menu.svg";
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const joinForm = document.getElementById('joinForm');
+    joinForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // 필수 입력값 가져오기
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('pw').value;
+        var passwordConfirm = document.getElementById('pw-confirm').value;
+
+        // 필수 입력값이 비어있는 경우 경고 표시
+        if (!name || !email || !password || !passwordConfirm) {
+            alert('All fields must be filled.');
+            event.preventDefault(); // 폼 제출 막기
+        } else if (password !== passwordConfirm) {
+            alert('Passwords do not match.');
+            event.preventDefault(); // 폼 제출 막기
+        } else {
+            this.submit();
+        }
+    });
+});

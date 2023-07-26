@@ -5,3 +5,6 @@ def login_view(request):
 
 def join_view(request):
     return render(request, 'join.html')
+
+def mypage_view(request):
+    return render(request, 'mypage.html')
