@@ -43,7 +43,7 @@
             </div>
             <div class="main">
                 <nav class="navi">
-                    {% if user.is_authenticated %}
+                    {% if 'user' in request.session %}
                         <a class="nav_txt" href="{% url 'logout' %}">Logout</a>
                         <a class="nav_txt" href="{% url 'mypage' %}">My Page</a> 
                     {% else %}

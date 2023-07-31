@@ -4,6 +4,7 @@ from .models import User
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.hashers import make_password
 
 def login_view(request):
     return render(request, 'login.html')
@@ -37,19 +38,25 @@ def login(request):
         try:
             user = User.objects.get(user_email=email)
             if user.user_pw == password:
-                request.session['user_id'] = user.id
+                # 로그인 성공 시 사용자를 로그인 상태로 처리
+                request.session['user'] = user.id
+                print('login success')
                 return redirect('/')  # 로그인 성공 후 마이페이지 또는 다른 페이지로 리다이렉트
             else:
                 # 비밀번호 불일치
                 messages.error(request, '유효하지 않은 로그인 정보입니다.')
                 return redirect('login')
-        except ObjectDoesNotExist:
+        except User.DoesNotExist:
             # 사용자가 존재하지 않음
             messages.error(request, '유효하지 않은 로그인 정보입니다.')
             return redirect('login')
     else:
         return render(request, 'login.html')
-    
+
+def logout_view(request):
+    if 'user' in request.session:
+        del request.session['user']
+    return redirect('login')
 
 def register(request):
     if request.method == 'POST':
@@ -66,7 +73,7 @@ def register(request):
             return redirect('join')
         else:
             user = User(
-                user_pw=user_pw,
+                user_pw=make_password(user_pw),
                 user_name=user_name,
                 user_email=user_email
             )

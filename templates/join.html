@@ -43,8 +43,13 @@
             </div>
             <div class="main">
                 <nav class="navi">
-                    <a class="nav_txt" href="{% url 'login' %}">Login</a>
-                    <a class="nav_txt" href="{% url 'join' %}">Join</a>
+                    {% if 'user' in request.session %}
+                        <a class="nav_txt" href="{% url 'logout' %}">Logout</a>
+                        <a class="nav_txt" href="{% url 'mypage' %}">My Page</a> 
+                    {% else %}
+                        <a class="nav_txt" href="{% url 'login' %}">Login</a>
+                        <a class="nav_txt" href="{% url 'join' %}">Join</a>
+                    {% endif %}
                 </nav>
                 <div class="second">
                     {% block contents %}
