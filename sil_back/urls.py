@@ -9,7 +9,7 @@ def index(request):
 
 urlpatterns = [
     path('', index),
-    path('login/', views.login_view, name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name = "login.html"), name = "login"),
     path('join/', include('user.urls')),  # user 앱의 urls.py를 include
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('mypage/', views.mypage_view, name='mypage'),

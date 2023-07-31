@@ -48,10 +48,11 @@
                 </nav>
                 <div class="second">
                     <div>
-                        <form method="post">
+                        <form id="loginForm" method="POST">
+                            {% csrf_token %}
                             <div>
                                 <div class="center">
-                                    <input class="txt" type="email" placeholder="E-mail"/>
+                                    <input name="email" id="email" class="txt" type="email" placeholder="E-mail"/>
                                 </div>
                                 <div class="center">
                                     <div class="form_line"></div>
@@ -59,7 +60,7 @@
                             </div>
                             <div>
                                 <div class="center">
-                                    <input class="txt" type="password" placeholder="Password"/>
+                                    <input name="pw" id="pw" class="txt" type="password" placeholder="Password"/>
                                 </div>
                                 <div class="center">
                                     <div class="form_line"></div>
