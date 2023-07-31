@@ -10,7 +10,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=PT+Sans&family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="icon" href="{% static 'imgs/logo.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/closet.css' %}">
 </head>
 <body>
     <header>
@@ -19,12 +19,12 @@
                 <div>
                     <input id="check-btn" type="checkbox" />
                     <label for="check-btn">
-                        <img class="menu" id="menu-icon" src="{% static 'imgs/menu.svg' %}" alt="menu">
+                        <img class="menu" id="menu-icon" src="{% static 'imgs/menu_closet.svg' %}" alt="menu">
                     </label>
                     <ul class="menubars">
                         <li><a class="txt">Closet</a></li>
                         <div class="blank"></div>
-
+                        
                         {% if 'user' in request.session %}
                             <li><a href="{% url 'closet' %}">Closet</a></li>
                             <div class="line"></div>
@@ -63,36 +63,11 @@
                     {% endif %}
                 </nav>
                 <div class="second">
-                    <div>
-                        <form id="loginForm" method="POST">
-                            {% csrf_token %}
-                            <div>
-                                <div class="center">
-                                    <input name="email" id="email" class="txt" type="email" placeholder="E-mail"/>
-                                </div>
-                                <div class="center">
-                                    <div class="form_line"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="center">
-                                    <input name="pw" id="pw" class="txt" type="password" placeholder="Password"/>
-                                </div>
-                                <div class="center">
-                                    <div class="form_line"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="center">
-                                    <input class="btn" type="submit" value="Login" />
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </header>
-    <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/closet.js' %}"></script>
 </body>
 </html>

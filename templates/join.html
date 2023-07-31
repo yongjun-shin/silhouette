@@ -25,14 +25,25 @@
                         <li><a class="txt">Closet</a></li>
                         <div class="blank"></div>
 
-                        <li><a href="closet">Closet</a></li>
-                        <div class="line"></div>
-                        <li><a href="weather">Weather</a></li>
-                        <div class="line"></div>
-                        <li><a href="gallery">Gallery</a></li>
-                        <div class="line"></div>
-                        <li><a href="trend">Trend</a></li>
-                        <div class="line"></div>
+                        {% if 'user' in request.session %}
+                            <li><a href="{% url 'closet' %}">Closet</a></li>
+                            <div class="line"></div>
+                            <li><a href="weather/">Weather</a></li>
+                            <div class="line"></div>
+                            <li><a href="gallery/">Gallery</a></li>
+                            <div class="line"></div>
+                            <li><a href="trend/">Trend</a></li>
+                            <div class="line"></div>
+                        {% else %}
+                            <li><a href="{% url 'login' %}">Closet</a></li>
+                            <div class="line"></div>
+                            <li><a href="{% url 'login' %}">Weather</a></li>
+                            <div class="line"></div>
+                            <li><a href="{% url 'login' %}">Gallery</a></li>
+                            <div class="line"></div>
+                            <li><a href="{% url 'login' %}">Trend</a></li>
+                            <div class="line"></div>
+                        {% endif %}
                         <div class="contact">
                             <p>Contact Us</p>
                             <span>syj1634@naver.com</span>

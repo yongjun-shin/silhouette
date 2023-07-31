@@ -12,24 +12,6 @@ def login_view(request):
 def join_view(request):
     return render(request, 'join.html')
 
-# def login(request):
-#     if request.method == 'POST':
-#         email = request.POST.get('email')
-#         password = request.POST.get('pw')
-#         print(email, password)
-#         user = authenticate(request, email=email, password=password)
-#         print(user)
-#         if user is not None:
-#             login(request, user)
-#             # 로그인 성공 시 특정 URL로 이동합니다 (mypage 뷰로 변경 가능합니다)
-#             return redirect('/')  # 원하는 URL 이름으로 변경할 수 있습니다
-#         else:
-#             # 잘못된 로그인 정보 처리
-#             # 예를 들어, 에러 메시지와 함께 다시 로그인 페이지를 보여줄 수 
-#             print("유효 x 로그인 정보")
-#             return render(request, 'login.html', {'error_message': '유효하지 않은 로그인 정보입니다'})
-#     else:
-#         return render(request, 'login.html')
 def login(request):
     if request.method == 'POST':
         email = request.POST.get('email')
