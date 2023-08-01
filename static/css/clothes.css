@@ -104,15 +104,80 @@ body {
 }
 
 .second {
-    margin-top: 340px;
-    margin-left: 400px;
+    margin-top: 140px;
+    margin-left: 200px;
 }
-.second .closet {
-    width: 900px;
+.second .clothes {
+    width: 1260px;
+    height: 880px;
+    background: rgba(217, 217, 217, 0.70);
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+}
+.second .clothes .inner_title{
+    font-family: 'Allura';
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.second .clothes .inner_con {
+    display: flex;
+    justify-content: center;
+}
+.second .clothes .inner {
+    width: 930px;
     display: flex;
     justify-content: space-between;
 }
-.second .closet .item {
+.second .clothes .inner .inner_subtitle {
+    font-family: 'PT Serif';
+    font-size: 30px;
+}
+.second .clothes .inner2 {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+.second .clothes .inner2 .inner_box {
+    width: 380px;
+    height: 650px;  
+    border-radius: 20px;
+    background: rgba(217, 217, 217, 0.80);
+}
+.second .clothes .inner2 .inner_box .contents {
+    display: flex;
+    justify-content: center;
+}
+.second .clothes .inner2 .inner_box .contents .item {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #959595;
+}
+.second .clothes .inner2 .inner_box .contents .item .btn {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: #7a7a7a;
+    font-family: 'PT Serif';
+    font-size: 20px;
     cursor: pointer;
-    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+}
+.second .clothes .btn_con {
+    display: flex;
+    justify-content: center; 
+}
+.second .clothes .btn_con .btn {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: #7a7a7a;
+    font-family: 'PT Serif';
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

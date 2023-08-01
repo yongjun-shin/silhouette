@@ -38,7 +38,7 @@ def login(request):
 def logout_view(request):
     if 'user' in request.session:
         del request.session['user']
-    return redirect('login')
+    return redirect('/')
 
 def register(request):
     if request.method == 'POST':

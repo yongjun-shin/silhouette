@@ -10,7 +10,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=PT+Sans&family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="icon" href="{% static 'imgs/logo.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/closet.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/clothes.css' %}">
 </head>
 <body>
     <header>
@@ -63,15 +63,41 @@
                     {% endif %}
                 </nav>
                 <div class="second">
-                    <div class="closet">
-                        <a href="{% url 'clothes' %}"><img class="item" id="clothes" src="{% static 'imgs/clothes.svg' %}" alt="clothes"></a>
-                        <img class="item" id="accessory" src="{% static 'imgs/accessory.svg' %}" alt="accessory">
-                        <img class="item" id="shoes" src="{% static 'imgs/shoes.svg' %}" alt="shoes">
+                    <div class="clothes">
+                        <p class="inner_title">Clothes</p>
+                        <div class="inner_con">
+                            <div class="inner">
+                                <p class="inner_subtitle">Outer</p>
+                                <p class="inner_subtitle">Top</p>
+                                <p class="inner_subtitle">Bottom</p>
+                            </div>
+                        </div>
+                        <div class="inner_con">
+                            <div class="inner2">
+                                <div class="inner_box">
+                                    <div class="contents">
+                                        <div class="item">
+                                            <p>· 라이더 자켓</p>
+                                            <button class="btn" id="del">delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+
+                                </div>
+                                <div class="inner_box">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_con">
+                            <button class="btn" id="add">Add</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <script type="text/javascript" src="{% static 'js/closet.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/clothes.js' %}"></script>
 </body>
 </html>

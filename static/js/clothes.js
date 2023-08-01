@@ -9,9 +9,4 @@ checkBtn.addEventListener('change', function() {
     }
 });
 
-
-// const clothes = document.getElementById('clothes');
-// const acc = document.getElementById('accessory');
-// const shoes = document.getElementById('shoes');
-
-// clothes.onclick
+const addBtn = document.getElementById('add');
