@@ -181,3 +181,33 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.second .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.second .modal.show {
+    display: block;
+}
+.second .modal .con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 836px;
+    height: 609px;
+    border-radius: 20px;
+    background: #887D7D;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.second .modal .con .modal_close {
+    cursor: pointer;
+    float: right;
+    padding-right: 10px;
+}

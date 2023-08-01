@@ -9,4 +9,13 @@ checkBtn.addEventListener('change', function() {
     }
 });
 
+const modal = document.getElementById('modal');
 const addBtn = document.getElementById('add');
+const closeBtn = modal.querySelector('.modal_close');
+
+addBtn.addEventListener('click', ()=> {
+    modal.style.display = 'block';
+});
+closeBtn.addEventListener("click", e => {
+    modal.style.display = "none"
+})
