@@ -8,7 +8,10 @@ def closet_view(request):
     return render(request, 'closet.html')
 
 def clothes_view(request):
-    return render(request, 'clothes.html')
+    outers = Clothes.objects.filter(clothes_type='outer')
+    tops = Clothes.objects.filter(clothes_type='top')
+    bottoms = Clothes.objects.filter(clothes_type='bottom')
+    return render(request, 'clothes.html', {'outers' : outers, 'tops' : tops, 'bottoms': bottoms})
 
 def acc_view(request):
     return render(request, 'acc.html')
@@ -31,3 +34,7 @@ def add_clothes(request):
         return redirect('/closet/clothes/')  # 이동할 URL 또는 뷰 이름
 
     return render(request, 'clothes.html')  # 뷰에서 처리할 HTML 파일의 경로
+
+def get_outer(request):
+    outers = Clothes.objects.filter(clothes_type='outer')
+    return render(request, 'clothes.html', {'outers' : outers})

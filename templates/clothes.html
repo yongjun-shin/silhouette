@@ -76,10 +76,12 @@
                             <div class="inner2">
                                 <div class="inner_box">
                                     <div class="contents">
+                                        {% for outer in outers %}
                                         <div class="item">
-                                            <p>· 라이더 자켓</p>
+                                            <p>· {{outer.clothes_name}}</p>
                                             <button class="btn" id="del">delete</button>
                                         </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                                 <div class="inner_box">
