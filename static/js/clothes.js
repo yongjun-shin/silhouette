@@ -18,4 +18,12 @@ addBtn.addEventListener('click', ()=> {
 });
 closeBtn.addEventListener("click", e => {
     modal.style.display = "none"
-})
+});
+
+const upload = document.getElementById('upload');
+const file = document.getElementById('file');
+
+file.addEventListener('change', function(event) {
+    var input = file.value;
+    upload.value = input;
+});

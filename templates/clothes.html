@@ -100,7 +100,32 @@
                                 <p class="modal_close">X</p>
                             </div>
                             <p class="modal_title">Add Items</p>
-                            
+                            <form method="post" enctype="multipart/form-data" action="{% url 'add_clothes' %}">
+                                {% csrf_token %}
+                                <div class="radio_con">
+                                    <div class="radio">
+                                        <label><input type="radio" name="clothes" value="outer">Outer</label>
+                                        <label><input type="radio" name="clothes" value="top">Top</label>
+                                        <label><input type="radio" name="clothes" value="bottom">Bottom</label>
+                                    </div>
+                                </div>
+                                <div class="name_img">
+                                    <div>
+                                        <div class="name">
+                                            <p>Name</p>
+                                            <input type="text" name="name">
+                                        </div>
+                                        <div class="img">
+                                            <p>Image</p>
+                                            <input id="upload" class="upload" placeholder="첨부파일" readonly>
+                                            <label for="file">파일찾기<input type="file" id="file" name="file"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal_btn_con">
+                                    <button class="modal_submit" type="submit">Add</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

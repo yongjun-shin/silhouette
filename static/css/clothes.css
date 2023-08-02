@@ -199,9 +199,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    font-family: 'PT Serif';
 
-    width: 836px;
-    height: 609px;
+    width: 1200px;
+    height: 850px;
     border-radius: 20px;
     background: #887D7D;
     box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
@@ -210,4 +211,107 @@ body {
     cursor: pointer;
     float: right;
     padding-right: 10px;
+    font-size: 25px;
+}
+.second .modal .con .modal_title {
+    text-align: center;
+    font-size: 50px;
+}
+.second .modal .con .radio_con {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.second .modal .con .radio_con .radio {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 35px;
+}
+.second .modal .con .radio_con .radio [type='radio']{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+[type='radio']:checked {
+    accent-color: #887D7D;
+}
+.second .modal .con .name_img {
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+}
+.second .modal .con .name {
+    font-size: 25px;
+    width: 650px;
+    display: flex;
+    margin-bottom: 30px;
+}
+.second .modal .con .name p {
+    width: 70px;
+    margin: 0px;
+    
+}
+.second .modal .con .name [type='text'] {
+    background-color: #D9D9D9;
+    margin-left: 10px;
+    font-size: 20px;
+    border: none;
+    width: 450px;
+    height: 30px;
+    vertical-align: middle;
+}
+.second .modal .con .img {
+    font-size: 25px;
+    width: 650px;
+    display: flex;
+}
+.second .modal .con .img p {
+    width: 70px;
+    margin: 0px;
+    margin-right: 10px;
+}
+.second .modal .con .img .upload {
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    width: 450px;
+    background-color: #D9D9D9;
+    color: #999999;
+    cursor: default;
+    border: none;
+}
+.second .modal .con .img label {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 15px;
+    line-height: 30px;
+    width: 80px;
+    text-align: center;
+}
+.second .modal .con .img [type='file'] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+.second .modal .con .modal_btn_con {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.second .modal .con .modal_btn_con .modal_submit {
+    width: 87px;
+    height: 42px;
+    border-radius: 6px;
+    background: #D9D9D9;
+    font-size: 20px;
+    cursor: pointer;
 }
