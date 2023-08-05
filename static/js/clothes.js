@@ -27,3 +27,25 @@ file.addEventListener('change', function(event) {
     var input = file.value;
     upload.value = input;
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const deleteButtons = document.querySelectorAll('#del');
+
+    deleteButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const itemId = this.dataset.itemId;
+
+            fetch(`/closet/del_clothes/${itemId}/`, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRFToken': window.csrfToken,
+                },
+            })
+            .then(response => {
+                if (response.ok) {
+                    location.reload();
+                }
+            });
+        });
+    });
+});

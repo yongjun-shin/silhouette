@@ -32,8 +32,18 @@ def add_clothes(request):
 
         # 저장 후 다른 페이지로 이동 또는 처리
         return redirect('/closet/clothes/')  # 이동할 URL 또는 뷰 이름
-
     return render(request, 'clothes.html')  # 뷰에서 처리할 HTML 파일의 경로
+
+def del_clothes(request, item_id):
+    if request.method == 'DELETE':
+        try:
+            clothes = Clothes.objects.get(pk=item_id)
+            clothes.delete()
+            return redirect('/closet/clothes/')
+        except Clothes.DoesNotExist:
+            print("You Can't Delete")
+
+    return render(request, 'clothes.html')
 
 def get_outer(request):
     outers = Clothes.objects.filter(clothes_type='outer')
