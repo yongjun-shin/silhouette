@@ -92,7 +92,7 @@
                                 <div class="contents">
                                     {% for outer in outers %}
                                     <div class="item">
-                                        <p>· {{outer.clothes_name}}</p>
+                                        <p id="clothes_name" data-item-id="{{ outer.image_path }}">· {{outer.clothes_name}}</p>
                                         <button class="btn" id="del" data-item-id="{{ outer.id }}">delete</button>
                                     </div>
                                     {% endfor %}
@@ -142,6 +142,13 @@
                                 <button class="modal_submit" type="submit">Add</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="modal_clothes" id="modal_clothes">
+                    <div class="modal_clothes_con">
+                        <div>
+                            <p class="modal_clothes_close">X</p>
+                        </div>
                     </div>
                 </div>
             </div>

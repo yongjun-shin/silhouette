@@ -154,6 +154,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #959595;
+    cursor: pointer;
 }
 .second .clothes .inner2 .inner_box .contents .item .btn {
     width: 80px;
@@ -314,4 +315,34 @@ body {
     background: #D9D9D9;
     font-size: 20px;
     cursor: pointer;
+}
+
+.second .modal_clothes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.second .modal_clothes.show {
+    display: block;
+}
+.second .modal_clothes .modal_clothes_close {
+    cursor: pointer;
+    float: right;
+    padding-right: 10px;
+    font-size: 25px;
+}
+.second .modal_clothes .modal_clothes_con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 1200px;
+    height: 850px;
+    border-radius: 20px;
+    background: #887D7D;
 }

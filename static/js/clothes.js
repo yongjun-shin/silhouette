@@ -48,4 +48,26 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    const P = document.querySelectorAll('#clothes_name');
+    const modalClothesCon = modalClothes.querySelector('.modal_clothes_con');
+    P.forEach(function(p) {
+        p.addEventListener('click', function() {
+            const itemId = this.dataset.itemId;
+            console.log(itemId);
+            modalClothesCon.style.backgroundImage = `url(${itemId})`;
+            modalClothes.style.display = 'block';
+        });
+    });
+});
+
+const modalClothes = document.getElementById('modal_clothes');
+const clothesName = document.getElementById('clothes_name');
+const clothesBtn = modalClothes.querySelector('.modal_clothes_close');
+
+clothesName.addEventListener('click', ()=> {
+    modalClothes.style.display = 'block';
+});
+clothesBtn.addEventListener("click", e => {
+    modalClothes.style.display = "none"
 });
