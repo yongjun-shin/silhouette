@@ -1,0 +1,320 @@
+body {
+    background-image: url('../imgs/MASTER_BEDROOM.jpg');
+    background-repeat: no-repeat;
+    background-size: 2400px 1200px;
+
+    zoom: 0.8;
+}
+
+#check-btn { 
+    display: none;
+}
+#check-btn:checked ~ .menubars { 
+    display: block; 
+} 
+.menubars { 
+    display: none;
+    width: 300px;
+    height: 112vh;
+    border-radius: 0px 50px 50px 0px;
+    background: #D0D0D0;
+    list-style-type: none;
+    margin-left: -10px;
+}
+.menubars .txt {
+    color: #D0D0D0;
+}
+.menubars .blank {
+    width: 250px;
+    height: 1px;
+    background-color: #D0D0D0;
+    margin-top: 10px;
+}
+.menubars .line {
+    width: 250px;
+    height: 1px;
+    background-color: #353434;
+    margin-top: 10px;
+}
+.menubars > li {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.menubars > li > a{
+    text-decoration: none;
+    color:#353434;
+    font-family: PT Serif;
+    font-size: 25px;
+}
+.menubars .contact {
+    color:#353434;
+    font-family: PT Serif;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 380px;
+}
+.menubars .contact > P{
+    margin-bottom: 0px;
+}
+.menubars .contact > span{
+    font-size: 20px;
+    margin-left: 50px;
+}
+.menu {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+.container {
+    display: flex;
+}
+.first {
+    width: 380px;
+    height: 100vh;
+    position: relative;
+}
+.first .title {
+    font-size: 80px;
+    font-family: 'Allura';
+    text-decoration: none;
+    color:#D9BA8B;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+
+.container .main {
+    width: calc(100% - 380px);
+    margin-top: 100px;
+}
+.navi {
+    margin-top: 50px;
+    font-family: 'PT Sans';
+    font-size: 25px;
+    float: right;
+    margin-right: 60px;
+}
+.navi .nav_txt {
+    text-decoration: none;
+    color: #D9BA8B;
+    margin-right: 40px;
+}
+
+.second {
+    margin-top: 140px;
+    margin-left: 200px;
+}
+.second .acc {
+    width: 1260px;
+    height: 880px;
+    background: rgba(217, 217, 217, 0.70);
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+}
+.second .acc .inner_title{
+    font-family: 'Allura';
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.second .acc .inner_con {
+    display: flex;
+    justify-content: center;
+}
+.second .acc .inner2 {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+.second .acc .inner2 .inner_box {
+    width: 800px;
+    height: 750px;  
+    border-radius: 20px;
+    background: rgba(217, 217, 217, 0.80);
+}
+.second .acc .inner2 .inner_box .contents {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.second .acc .inner2 .inner_box .contents .item {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #959595;
+    cursor: pointer;
+}
+.second .acc .inner2 .inner_box .contents .item .btn {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: #7a7a7a;
+    font-family: 'PT Serif';
+    font-size: 20px;
+    cursor: pointer;
+}
+.second .acc .btn_con {
+    display: flex;
+    justify-content: center; 
+}
+.second .acc .btn_con .btn {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: #7a7a7a;
+    font-family: 'PT Serif';
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.second .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.second .modal.show {
+    display: block;
+}
+.second .modal .con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: 'PT Serif';
+
+    width: 1200px;
+    height: 850px;
+    border-radius: 20px;
+    background: #887D7D;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.second .modal .con .modal_close {
+    cursor: pointer;
+    float: right;
+    padding-right: 10px;
+    font-size: 25px;
+}
+.second .modal .con .modal_title {
+    text-align: center;
+    font-size: 50px;
+}
+.second .modal .con .name_img {
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+}
+.second .modal .con .name {
+    font-size: 25px;
+    width: 650px;
+    display: flex;
+    margin-bottom: 30px;
+}
+.second .modal .con .name p {
+    width: 70px;
+    margin: 0px;
+    
+}
+.second .modal .con .name [type='text'] {
+    background-color: #D9D9D9;
+    margin-left: 10px;
+    font-size: 20px;
+    border: none;
+    width: 450px;
+    height: 30px;
+    vertical-align: middle;
+}
+.second .modal .con .img {
+    font-size: 25px;
+    width: 650px;
+    display: flex;
+}
+.second .modal .con .img p {
+    width: 70px;
+    margin: 0px;
+    margin-right: 10px;
+}
+.second .modal .con .img .upload {
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    width: 450px;
+    background-color: #D9D9D9;
+    color: #999999;
+    cursor: default;
+    border: none;
+}
+.second .modal .con .img label {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 15px;
+    line-height: 30px;
+    width: 80px;
+    text-align: center;
+}
+.second .modal .con .img [type='file'] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+.second .modal .con .modal_btn_con {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.second .modal .con .modal_btn_con .modal_submit {
+    width: 87px;
+    height: 42px;
+    border-radius: 6px;
+    background: #D9D9D9;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.second .modal_acc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.second .modal_acc.show {
+    display: block;
+}
+.second .modal_acc .modal_acc_close {
+    cursor: pointer;
+    float: right;
+    padding-right: 10px;
+    font-size: 25px;
+}
+.second .modal_acc .modal_acc_con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 1200px;
+    height: 850px;
+    border-radius: 20px;
+    background: #887D7D;
+}

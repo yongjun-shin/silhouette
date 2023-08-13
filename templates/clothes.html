@@ -90,19 +90,39 @@
                         <div class="inner2">
                             <div class="inner_box">
                                 <div class="contents">
-                                    {% for outer in outers %}
-                                    <div class="item">
-                                        <p id="clothes_name" data-item-id="{{ outer.image_path }}">· {{outer.clothes_name}}</p>
-                                        <button class="btn" id="del" data-item-id="{{ outer.id }}">delete</button>
+                                    <div>
+                                        {% for outer in outers %}
+                                        <div class="item">
+                                            <p id="clothes_name" data-item-id="{{ outer.image_path }}">· {{outer.clothes_name}}</p>
+                                            <button class="btn" id="del" data-item-id="{{ outer.id }}">delete</button>
+                                        </div>
+                                        {% endfor %}
                                     </div>
-                                    {% endfor %}
                                 </div>
                             </div>
                             <div class="inner_box">
-
+                                <div class="contents">
+                                    <div>
+                                        {% for top in tops %}
+                                        <div class="item">
+                                            <p id="clothes_name" data-item-id="{{ top.image_path }}">· {{top.clothes_name}}</p>
+                                            <button class="btn" id="del" data-item-id="{{ top.id }}">delete</button>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
                             </div>
                             <div class="inner_box">
-
+                                <div class="contents">
+                                    <div>
+                                        {% for bottom in bottoms %}
+                                        <div class="item">
+                                            <p id="clothes_name" data-item-id="{{ bottom.image_path }}">· {{bottom.clothes_name}}</p>
+                                            <button class="btn" id="del" data-item-id="{{ bottom.id }}">delete</button>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

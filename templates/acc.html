@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silhouette</title>
+
+    <base href="/">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=PT+Sans&family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'imgs/logo.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/acc.css' %}">
+    <script>
+        // JavaScript로 CSRF 토큰을 가져와서 변수에 저장
+        const csrfToken = getCookie('csrftoken');
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <script>
+            window.csrfToken = csrfToken;
+        </script>
+    </header>
+    <div class="container">
+        <div class="first">
+            <div>
+                <input id="check-btn" type="checkbox" />
+                <label for="check-btn">
+                    <img class="menu" id="menu-icon" src="{% static 'imgs/menu_closet.svg' %}" alt="menu">
+                </label>
+                <ul class="menubars">
+                    <li><a class="txt">Closet</a></li>
+                    <div class="blank"></div>
+                    
+                    {% if 'user' in request.session %}
+                        <li><a href="{% url 'closet' %}">Closet</a></li>
+                        <div class="line"></div>
+                        <li><a href="weather/">Weather</a></li>
+                        <div class="line"></div>
+                        <li><a href="gallery/">Gallery</a></li>
+                        <div class="line"></div>
+                        <li><a href="trend/">Trend</a></li>
+                        <div class="line"></div>
+                    {% else %}
+                        <li><a href="{% url 'login' %}">Closet</a></li>
+                        <div class="line"></div>
+                        <li><a href="{% url 'login' %}">Weather</a></li>
+                        <div class="line"></div>
+                        <li><a href="{% url 'login' %}">Gallery</a></li>
+                        <div class="line"></div>
+                        <li><a href="{% url 'login' %}">Trend</a></li>
+                        <div class="line"></div>
+                    {% endif %}
+                    <div class="contact">
+                        <p>Contact Us</p>
+                        <span>syj1634@naver.com</span>
+                    </div>
+                </ul>
+            </div>
+            <a class="title" href="/">Silhouette</a>
+        </div>
+        <div class="main">
+            <nav class="navi">
+                {% if 'user' in request.session %}
+                    <a class="nav_txt" href="{% url 'logout' %}">Logout</a>
+                    <a class="nav_txt" href="{% url 'mypage' %}">My Page</a> 
+                {% else %}
+                    <a class="nav_txt" href="{% url 'login' %}">Login</a>
+                    <a class="nav_txt" href="{% url 'join' %}">Join</a>
+                {% endif %}
+            </nav>
+            <div class="second">
+                <div class="acc">
+                    <p class="inner_title">Accessory</p>
+                    <div class="inner_con">
+                        <div class="inner2">
+                            <div class="inner_box">
+                                <div class="contents">
+                                    <div>
+                                        {% for acc in accs %}
+                                        <div class="item">
+                                            <p id="acc_name" data-item-id="{{ acc.image_path }}">· {{acc.acc_name}}</p>
+                                            <button class="btn" id="del" data-item-id="{{ acc.id }}">delete</button>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_con">
+                        <button class="btn" id="add">Add</button>
+                    </div>
+                </div>
+                <div class="modal" id="modal">
+                    <div class="con">
+                        <div>
+                            <p class="modal_close">X</p>
+                        </div>
+                        <p class="modal_title">Add Items</p>
+                        <form method="post" enctype="multipart/form-data" action="{% url 'add_acc' %}">
+                            {% csrf_token %}
+                            <div class="name_img">
+                                <div>
+                                    <div class="name">
+                                        <p>Name</p>
+                                        <input type="text" name="name">
+                                    </div>
+                                    <div class="img">
+                                        <p>Image</p>
+                                        <input id="upload" class="upload" placeholder="첨부파일" readonly>
+                                        <label for="file">파일찾기<input type="file" id="file" name="file"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal_btn_con">
+                                <button class="modal_submit" type="submit">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal_acc" id="modal_acc">
+                    <div class="modal_acc_con">
+                        <div>
+                            <p class="modal_acc_close">X</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'js/acc.js' %}"></script>
+</body>
+</html>
