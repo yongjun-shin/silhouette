@@ -101,12 +101,12 @@ body {
 }
 
 .second {
-    margin-top: 240px;
+    margin-top: 340px;
     font-family: 'PT Serif';
 }
 .second > div {
     width: 650px;
-    margin-left: 300px;
+    margin-left: 500px;
 }
 .second .txt {
     width: 428px;

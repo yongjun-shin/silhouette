@@ -102,45 +102,27 @@ body {
 
 .second {
     margin-top: 340px;
-    font-family: 'PT Serif';
 }
 .second > div {
-    width: 650px;
     margin-left: 500px;
-}
-.second .txt {
-    width: 428px;
-    background: none;
-    border: none;
-    color: #353434;
+    width: 650px;
     font-family: 'PT Serif';
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-.second .btn {
-    width: 220px;
-    height: 70px;
-    border-radius: 14px;
-    border: 1px solid #353434;
     color: #353434;
-    font-family: 'PT Serif';
-    font-size: 28px;
-    background: none;
-    cursor: pointer;
-    margin-top: 40px;
 }
-.second .btn:hover {
+.second > div > p {
+    font-size: 40px;
     font-weight: bold;
-    border: 2px solid #353434;
 }
-.second .form_line {
-    width: 448px;
-    height: 1px;
-    background: #353434;
-    margin-bottom: 56px;
-}
-
-.center {
+.second .mypage {
+    width: 800px;
+    margin-top: 70px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+.second .mypage .space {
+    text-align: center;
+    font-size: 30px;
+}
+.second .mypage .space > p {
+    margin: 5px;
 }

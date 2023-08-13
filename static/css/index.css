@@ -101,11 +101,11 @@ body {
 }
 
 .second {
-    margin-top: 240px;
+    margin-top: 340px;
 }
 .second > div {
+    margin-left: 500px;
     width: 650px;
-    margin-left: 300px;
 }
 .second .body_txt {
     font-family: 'PT Serif';

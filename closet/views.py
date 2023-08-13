@@ -100,3 +100,4 @@ def get_top(request):
 def get_bottom(request):
     bottoms = Clothes.objects.filter(clothes_type='bottom')
     return render(request, 'clothes.html', {'bottoms' : bottoms})
+
