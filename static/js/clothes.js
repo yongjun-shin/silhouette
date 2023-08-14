@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const P = document.querySelectorAll('#clothes_name');
-    const modalClothesCon = modalClothes.querySelector('.modal_clothes_con');
+    const modalImg = modalClothes.querySelector('.modal_img');
     P.forEach(function(p) {
         p.addEventListener('click', function() {
             const itemId = this.dataset.itemId;
             console.log(itemId);
-            modalClothesCon.style.backgroundImage = `url(${itemId})`;
+            modalImg.style.backgroundImage = `url(${itemId})`;
             modalClothes.style.display = 'block';
         });
     });

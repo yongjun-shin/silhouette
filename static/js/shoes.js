@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const P = document.querySelectorAll('#shoes_name');
-    const modalClothesCon = modalClothes.querySelector('.modal_shoes_con');
+    const modalClothesCon = modalClothes.querySelector('.modal_img');
     P.forEach(function(p) {
         p.addEventListener('click', function() {
             const itemId = this.dataset.itemId;

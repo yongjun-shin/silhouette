@@ -342,7 +342,21 @@ body {
     transform: translateX(-50%) translateY(-50%);
 
     width: 1200px;
-    height: 850px;
+    height: 1100px;
     border-radius: 20px;
     background: #887D7D;
+}
+.second .modal_clothes .modal_clothes_con .modal_img_con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1100px;
+}
+.second .modal_clothes .modal_clothes_con .modal_img_con .modal_img {
+    width: 1000px;
+    height: 1000px;
+    border-radius: 20px;
+    background: #7a7a7a no-repeat;
+    background-size: contain;
+    background-position: center center;
 }
