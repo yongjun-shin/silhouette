@@ -28,11 +28,11 @@
                         {% if 'user' in request.session %}
                             <li><a href="{% url 'closet' %}">Closet</a></li>
                             <div class="line"></div>
-                            <li><a href="weather/">Weather</a></li>
+                            <li><a href="{% url 'weather' %}">Weather</a></li>
                             <div class="line"></div>
-                            <li><a href="gallery/">Gallery</a></li>
+                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
                             <div class="line"></div>
-                            <li><a href="trend/">Trend</a></li>
+                            <li><a href="{% url 'trend' %}">Trend</a></li>
                             <div class="line"></div>
                         {% else %}
                             <li><a href="{% url 'login' %}">Closet</a></li>

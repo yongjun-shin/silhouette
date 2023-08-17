@@ -14,3 +14,6 @@ def mypage_view(request):
     shoeses = Shoes.objects.all().count()
 
     return render(request, 'mypage.html', {'outers':outers, 'tops':tops, 'bottoms':bottoms, 'accs':accs, 'shoeses':shoeses})
+
+def weather_view(request):
+    return render(request, 'weather.html')

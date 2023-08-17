@@ -1,0 +1,109 @@
+body {
+    background-image: url('../imgs/b1.png');
+    zoom: 0.8;
+}
+
+#check-btn { 
+    display: none;
+}
+#check-btn:checked ~ .menubars { 
+    display: block; 
+} 
+.menubars { 
+    display: none;
+    width: 300px;
+    height: 112vh;
+    border-radius: 0px 50px 50px 0px;
+    background: #D0D0D0;
+    list-style-type: none;
+    margin-left: -10px;
+}
+.menubars .txt {
+    color: #D0D0D0;
+}
+.menubars .blank {
+    width: 250px;
+    height: 1px;
+    background-color: #D0D0D0;
+    margin-top: 10px;
+}
+.menubars .line {
+    width: 250px;
+    height: 1px;
+    background-color: #353434;
+    margin-top: 10px;
+}
+.menubars > li {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.menubars > li > a{
+    text-decoration: none;
+    color:#353434;
+    font-family: PT Serif;
+    font-size: 25px;
+}
+.menubars .contact {
+    color:#353434;
+    font-family: PT Serif;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 380px;
+}
+.menubars .contact > P{
+    margin-bottom: 0px;
+}
+.menubars .contact > span{
+    font-size: 20px;
+    margin-left: 50px;
+}
+.menu {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+.container {
+    display: flex;
+}
+.first {
+    width: 380px;
+    height: 100vh;
+    position: relative;
+}
+.first .title {
+    font-size: 80px;
+    font-family: 'Allura';
+    text-decoration: none;
+    color:#353434;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+
+.container .main {
+    width: calc(100% - 380px);
+    margin-top: 100px;
+}
+.navi {
+    margin-top: 50px;
+    font-family: 'PT Sans';
+    font-size: 25px;
+    float: right;
+    margin-right: 60px;
+}
+.navi .nav_txt {
+    text-decoration: none;
+    color: #353434;
+    margin-right: 40px;
+}
+
+.second {
+    margin-top: 340px;
+}
+.second > div {
+    margin-left: 500px;
+    width: 650px;
+}
