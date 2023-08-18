@@ -15,6 +15,8 @@ urlpatterns = [
     path('mypage/', views.mypage_view, name='mypage'),
     path('closet/', include('closet.urls')),
     path('weather/', views.weather_view, name='weather'),
+    path('gallery/', views.gallery_view, name='gallery'),
+    path('trend/', views.trend_view, name='trend'),
     path("admin/", admin.site.urls),
 ]
 

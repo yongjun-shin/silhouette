@@ -17,3 +17,7 @@ def mypage_view(request):
 
 def weather_view(request):
     return render(request, 'weather.html')
+def gallery_view(request):
+    return render(request, 'gallery.html')
+def trend_view(request):
+    return render(request, 'trend.html')
