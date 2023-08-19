@@ -68,14 +68,16 @@
                             <p id="location">OO시</p>
                             <div class="weather_con">
                                 <div class="temper">
-                                    <p id="temperature"></p>
+                                    <img class="weather_icon" id="weather_icon" src="{% static 'imgs/sun.png' %}" />
+                                    <p id="temperature">00.0 °C</p>
                                 </div>
                                 <div class="clothes">
-
+                                    <img class="clothes_icon" id="clothes_icon1" src="{% static 'imgs/t_shirt.svg' %}" />
+                                    <img class="clothes_icon" id="clothes_icon2" src="{% static 'imgs/shorts.svg' %}" />
                                 </div>
                             </div>
                         </div>
-                        <p>오늘 Silhouette에서는 OO, OO를 추천드립니다.</p>
+                        <p id="recommend">오늘 Silhouette에서는 OO, OO를 추천드립니다.</p>
                     </div>
                 </div>
                 

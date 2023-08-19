@@ -126,3 +126,16 @@ body {
     font-size: 20px;
     margin-top: 100px;
 }
+.second .weather .weather_con {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+.second .weather .weather_con .temper .weather_icon {
+    width: 200px;
+    height: 200px;
+}
+.second .weather .weather_con .temper > p {
+    text-align: center;
+    font-size: 30px;
+}
