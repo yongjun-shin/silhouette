@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silhouette</title>
+
+    <base href="/">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=PT+Sans&family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'imgs/logo.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="first">
+                <div>
+                    <input id="check-btn" type="checkbox" />
+                    <label for="check-btn">
+                        <img class="menu" id="menu-icon" src="{% static 'imgs/menu.svg' %}" alt="menu">
+                    </label>
+                    <ul class="menubars">
+                        <li><a class="txt">Closet</a></li>
+                        <div class="blank"></div>
+
+                        {% if 'user' in request.session %}
+                            <li><a href="{% url 'closet' %}">Closet</a></li>
+                            <div class="line"></div>
+                            <li><a href="{% url 'weather' %}">Weather</a></li>
+                            <div class="line"></div>
+                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                            <div class="line"></div>
+                            <li><a href="{% url 'trend' %}">Trend</a></li>
+                            <div class="line"></div>
+                        {% else %}
+                            <li><a href="{% url 'login' %}">Closet</a></li>
+                            <div class="line"></div>
+                            <li><a href="{% url 'login' %}">Weather</a></li>
+                            <div class="line"></div>
+                            <li><a href="{% url 'login' %}">Gallery</a></li>
+                            <div class="line"></div>
+                            <li><a href="{% url 'login' %}">Trend</a></li>
+                            <div class="line"></div>
+                        {% endif %}
+                        <div class="contact">
+                            <p>Contact Us</p>
+                            <span>syj1634@naver.com</span>
+                        </div>
+                    </ul>
+                </div>
+                <a class="title" href="/">Silhouette</a>
+            </div>
+            <div class="main">
+                <nav class="navi">
+                    {% if 'user' in request.session %}
+                        <a class="nav_txt" href="{% url 'logout' %}">Logout</a>
+                        <a class="nav_txt" href="{% url 'mypage' %}">My Page</a> 
+                    {% else %}
+                        <a class="nav_txt" href="{% url 'login' %}">Login</a>
+                        <a class="nav_txt" href="{% url 'join' %}">Join</a>
+                    {% endif %}
+                </nav>
+                <div class="second">
+                    <div>
+                        <div class="main_title">
+                            <p>Gallery</p>
+                            <hr />
+                        </div>
+                        <div class="container">
+                            <div class="line1">
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                            </div>
+                            <div class="line2">
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                                <div class="add">
+                                    <img src="{% static 'imgs/add.svg' %}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    <script type="text/javascript" src="{% static 'js/gallery.js' %}"></script>
+</body>
+</html>
