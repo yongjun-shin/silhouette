@@ -8,3 +8,14 @@ checkBtn.addEventListener('change', function() {
         menuIcon.src = "/static/imgs/menu.svg";
     }
 });
+
+const modal = document.getElementById('modal');
+const addDiv = document.getElementById('add');
+const closeBtn = modal.querySelector('.modal_close');
+
+addDiv.addEventListener('click', ()=> {
+    modal.style.display = 'block';
+});
+closeBtn.addEventListener("click", e => {
+    modal.style.display = "none"
+});

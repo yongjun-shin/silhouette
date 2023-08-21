@@ -13,104 +13,102 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/join.css' %}">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="first">
-                <div>
-                    <input id="check-btn" type="checkbox" />
-                    <label for="check-btn">
-                        <img class="menu" id="menu-icon" src="{% static 'imgs/menu.svg' %}" alt="menu">
-                    </label>
-                    <ul class="menubars">
-                        <li><a class="txt">Closet</a></li>
-                        <div class="blank"></div>
+    <div class="container">
+        <div class="first">
+            <div>
+                <input id="check-btn" type="checkbox" />
+                <label for="check-btn">
+                    <img class="menu" id="menu-icon" src="{% static 'imgs/menu.svg' %}" alt="menu">
+                </label>
+                <ul class="menubars">
+                    <li><a class="txt">Closet</a></li>
+                    <div class="blank"></div>
 
-                        {% if 'user' in request.session %}
-                            <li><a href="{% url 'closet' %}">Closet</a></li>
-                            <div class="line"></div>
-                            <li><a href="{% url 'weather' %}">Weather</a></li>
-                            <div class="line"></div>
-                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                            <div class="line"></div>
-                            <li><a href="{% url 'trend' %}">Trend</a></li>
-                            <div class="line"></div>
-                        {% else %}
-                            <li><a href="{% url 'login' %}">Closet</a></li>
-                            <div class="line"></div>
-                            <li><a href="{% url 'login' %}">Weather</a></li>
-                            <div class="line"></div>
-                            <li><a href="{% url 'login' %}">Gallery</a></li>
-                            <div class="line"></div>
-                            <li><a href="{% url 'login' %}">Trend</a></li>
-                            <div class="line"></div>
-                        {% endif %}
-                        <div class="contact">
-                            <p>Contact Us</p>
-                            <span>syj1634@naver.com</span>
-                        </div>
-                    </ul>
-                </div>
-                <a class="title" href="/">Silhouette</a>
-            </div>
-            <div class="main">
-                <nav class="navi">
                     {% if 'user' in request.session %}
-                        <a class="nav_txt" href="{% url 'logout' %}">Logout</a>
-                        <a class="nav_txt" href="{% url 'mypage' %}">My Page</a> 
+                        <li><a href="{% url 'closet' %}">Closet</a></li>
+                        <div class="line"></div>
+                        <li><a href="{% url 'weather' %}">Weather</a></li>
+                        <div class="line"></div>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        <div class="line"></div>
+                        <li><a href="{% url 'trend' %}">Trend</a></li>
+                        <div class="line"></div>
                     {% else %}
-                        <a class="nav_txt" href="{% url 'login' %}">Login</a>
-                        <a class="nav_txt" href="{% url 'join' %}">Join</a>
+                        <li><a href="{% url 'login' %}">Closet</a></li>
+                        <div class="line"></div>
+                        <li><a href="{% url 'login' %}">Weather</a></li>
+                        <div class="line"></div>
+                        <li><a href="{% url 'login' %}">Gallery</a></li>
+                        <div class="line"></div>
+                        <li><a href="{% url 'login' %}">Trend</a></li>
+                        <div class="line"></div>
                     {% endif %}
-                </nav>
-                <div class="second">
-                    {% block contents %}
-                    <div>
-                        <form id="joinForm" method="POST" action="{% url 'register' %}">
-                            {% csrf_token %}
-                            <div>
-                                <div class="center">
-                                    <input id="name" name="name" class="txt" type="text" placeholder="Name"/>
-                                </div>
-                                <div class="center">
-                                    <div class="form_line"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="center">
-                                    <input id="email" name="email" class="txt" type="email" placeholder="E-mail"/>
-                                </div>
-                                <div class="center">
-                                    <div class="form_line"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="center">
-                                    <input id="pw" name="pw" class="txt" type="password" placeholder="Password"/>
-                                </div>
-                                <div class="center">
-                                    <div class="form_line"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="center">
-                                    <input id="pw-confirm" name="pw-confirm" class="txt" type="password" placeholder="Password Confirm"/>
-                                </div>
-                                <div class="center">
-                                    <div class="form_line"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="center">
-                                    <input class="btn" type="submit" value="Join" />
-                                </div>
-                            </div>
-                        </form>
+                    <div class="contact">
+                        <p>Contact Us</p>
+                        <span>syj1634@naver.com</span>
                     </div>
-                    {% endblock contents %}
+                </ul>
+            </div>
+            <a class="title" href="/">Silhouette</a>
+        </div>
+        <div class="main">
+            <nav class="navi">
+                {% if 'user' in request.session %}
+                    <a class="nav_txt" href="{% url 'logout' %}">Logout</a>
+                    <a class="nav_txt" href="{% url 'mypage' %}">My Page</a> 
+                {% else %}
+                    <a class="nav_txt" href="{% url 'login' %}">Login</a>
+                    <a class="nav_txt" href="{% url 'join' %}">Join</a>
+                {% endif %}
+            </nav>
+            <div class="second">
+                {% block contents %}
+                <div>
+                    <form id="joinForm" method="POST" action="{% url 'register' %}">
+                        {% csrf_token %}
+                        <div>
+                            <div class="center">
+                                <input id="name" name="name" class="txt" type="text" placeholder="Name"/>
+                            </div>
+                            <div class="center">
+                                <div class="form_line"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="center">
+                                <input id="email" name="email" class="txt" type="email" placeholder="E-mail"/>
+                            </div>
+                            <div class="center">
+                                <div class="form_line"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="center">
+                                <input id="pw" name="pw" class="txt" type="password" placeholder="Password"/>
+                            </div>
+                            <div class="center">
+                                <div class="form_line"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="center">
+                                <input id="pw-confirm" name="pw-confirm" class="txt" type="password" placeholder="Password Confirm"/>
+                            </div>
+                            <div class="center">
+                                <div class="form_line"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="center">
+                                <input class="btn" type="submit" value="Join" />
+                            </div>
+                        </div>
+                    </form>
                 </div>
+                {% endblock contents %}
             </div>
         </div>
-    </header>
+    </div>
     <script type="text/javascript" src="{% static 'js/join.js' %}"></script>
 </body>
 </html>

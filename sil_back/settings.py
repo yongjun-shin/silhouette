@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'sil_back',
     'user',
     'closet',
+    'gallery',
 ]
 
 MIDDLEWARE = [
