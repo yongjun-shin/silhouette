@@ -111,7 +111,7 @@
                         <p class="modal_close">X</p>
                     </div>
                     <p class="modal_title">Add Gallery</p> 
-                    <form method="post"></form>
+                    <form method="post" action="{% url 'add_gallery' %}">
                         {% csrf_token %}
                         <div class="modal_con">
                             <div>
@@ -125,30 +125,45 @@
                                             <p class="label">Outer</p>
                                             <select id="outer" name="outer">
                                                 <option value="None">None</option>
+                                                {% for outer in outers %}
+                                                    <option value="{{ outer.clothes_name }}">{{ outer.clothes_name }}</option>
+                                                {% endfor %}
                                             </select>
                                         </div>
                                         <div class="sec">
                                             <p class="label">Top</p>
                                             <select id="top" name="top">
                                                 <option value="None">None</option>
+                                                {% for top in tops %}
+                                                    <option value="{{ top.clothes_name }}">{{ top.clothes_name }}</option>
+                                                {% endfor %}
                                             </select>
                                         </div>
                                         <div class="sec">
                                             <p class="label">Pants</p>
                                             <select id="pants" name="pants">
                                                 <option value="None">None</option>
+                                                {% for bottom in bottoms %}
+                                                    <option value="{{ bottom.clothes_name }}">{{ bottom.clothes_name }}</option>
+                                                {% endfor %}
                                             </select>
                                         </div>
                                         <div class="sec">
                                             <p class="label">Acc</p>
                                             <select id="acc" name="acc">
                                                 <option value="None">None</option>
+                                                {% for acc in accs %}
+                                                    <option value="{{ acc.acc_name }}">{{ acc.acc_name }}</option>
+                                                {% endfor %}
                                             </select>
                                         </div>
                                         <div class="sec">
                                             <p class="label">Shoes</p>
                                             <select id="shoes" name="shoes">
                                                 <option value="None">None</option>
+                                                {% for shoes in shoeses %}
+                                                    <option value="{{ shoes.shoes_name }}">{{ shoes.shoes_name }}</option>
+                                                {% endfor %}
                                             </select>
                                         </div>
                                     </div>

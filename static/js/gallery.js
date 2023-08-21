@@ -19,3 +19,4 @@ addDiv.addEventListener('click', ()=> {
 closeBtn.addEventListener("click", e => {
     modal.style.display = "none"
 });
+
