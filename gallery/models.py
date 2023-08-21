@@ -8,7 +8,7 @@ class Gallery(models.Model):
     pants = models.CharField(max_length=16, verbose_name='하의')
     acc = models.CharField(max_length=16, verbose_name='악세서리')
     shoes = models.CharField(max_length=16, verbose_name='신발')
-    memo = models.CharField(max_length=50, verbose_name='메모')
+    memo = models.TextField(verbose_name='메모')
     gallery_add_dttm = models.DateTimeField(auto_now_add=True, verbose_name='갤러리 추가시간')
 
     def __str__(self):

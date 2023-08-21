@@ -113,7 +113,52 @@
                     <p class="modal_title">Add Gallery</p> 
                     <form method="post"></form>
                         {% csrf_token %}
-                        
+                        <div class="modal_con">
+                            <div>
+                                <div class="modal_con_title">
+                                    <p>Title</p>
+                                    <input type="text" name="title" placeholder=" 예시 : 8월 21일 ">
+                                </div>
+                                <div class="left_right">
+                                    <div class="left">
+                                        <div class="sec">
+                                            <p class="label">Outer</p>
+                                            <select id="outer" name="outer">
+                                                <option value="None">None</option>
+                                            </select>
+                                        </div>
+                                        <div class="sec">
+                                            <p class="label">Top</p>
+                                            <select id="top" name="top">
+                                                <option value="None">None</option>
+                                            </select>
+                                        </div>
+                                        <div class="sec">
+                                            <p class="label">Pants</p>
+                                            <select id="pants" name="pants">
+                                                <option value="None">None</option>
+                                            </select>
+                                        </div>
+                                        <div class="sec">
+                                            <p class="label">Acc</p>
+                                            <select id="acc" name="acc">
+                                                <option value="None">None</option>
+                                            </select>
+                                        </div>
+                                        <div class="sec">
+                                            <p class="label">Shoes</p>
+                                            <select id="shoes" name="shoes">
+                                                <option value="None">None</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <p>Memo</p>
+                                        <textarea name="memo" type="text" placeholder="오늘에 대한 일기를 적어보세요." ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="modal_btn_con">
                             <button class="modal_submit" type="submit">Add</button>
                         </div>
