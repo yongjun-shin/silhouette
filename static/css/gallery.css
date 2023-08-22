@@ -125,17 +125,21 @@ body {
 .second .container {
     width: 1210px;
     height: 500px;
-    display:inline;
 }
-.second .container .line1 {
+.second .container .line {
     width: 1210px;
-    height: 240px;
+    height: 600px;
     display: flex;
 }
-.second .container .line2 {
-    width: 1210px;
-    height: 240px;
+.second .container .line .items_con {
     display: flex;
+    flex-direction: column;
+    height: 270px;
+}
+.second .container .line .items_con > p {
+    text-align: center;
+    margin: 0px;
+    font-size: 20px;
 }
 .second .container .add {
     background: rgba(182, 182, 182, 0.32);
@@ -152,6 +156,16 @@ body {
     width: 120px;
     height: 120px;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.second .container .items {
+    background: rgba(182, 182, 182, 0.32);
+    box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 20px;   
 }
 
 .modal {
@@ -249,4 +263,51 @@ body {
     background: #D9D9D9;
     font-size: 20px;
     cursor: pointer;
+}
+
+.items_modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 25px;
+}
+.items_modal.show {
+    display: block;
+}
+.items_modal .items_modal_con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: 'PT Serif';
+    color: #353434;
+    width: 800px;
+    height: 800px;
+    border-radius: 20px;
+    background: #737373;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.items_modal .items_modal_con .item_modal_title {
+    text-align: center;
+    font-size: 50px;
+}
+.items_modal .items_modal_con .item_modal_content {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+.items_modal .items_modal_con .item_modal_content > p {
+    margin: 0px;
+    width: 600px;
+}
+.items_modal .items_modal_con .modal_close {
+    cursor: pointer;
+    float: right;
+    padding-right: 10px;
+    font-size: 25px;
 }

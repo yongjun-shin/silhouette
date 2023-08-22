@@ -68,39 +68,24 @@
                         <hr />
                     </div>
                     <div class="container">
-                        <div class="line1">
+                        <div class="line">
                             <div class="add" id="add">
                                 <img src="{% static 'imgs/add.svg' %}" />
                             </div>
-                            <div class="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
-                            </div>
-                            <div class="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
-                            </div>
-                            <div class="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
-                            </div>
-                            <div class="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
-                            </div>
-                        </div>
-                        <div class="line2">
-                            <div class="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
-                            </div>
-                            <div class="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
-                            </div>
-                            <div class="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
-                            </div>
-                            <div class="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
-                            </div>
-                            <div class="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
-                            </div>
+                            {% for gallery in gallerys %}
+                                <div class="items_con">
+                                    <div class="items" id="items" data-item-title="{{ gallery.title }}" data-item-memo="{{ gallery.memo }}">
+                                        <div>
+                                            <p>Outer : {{ gallery.outer }}</p>
+                                            <p>Top : {{ gallery.top }}</p>
+                                            <p>Pants : {{ gallery.pants }}</p>
+                                            <p>Acc : {{ gallery.acc }}</p>
+                                            <p>Shoes : {{ gallery.shoes }}</p>
+                                        </div>
+                                    </div>
+                                    <p>{{ gallery.title }}</p>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -178,6 +163,17 @@
                             <button class="modal_submit" type="submit">Add</button>
                         </div>
                     </form>
+                </div>
+            </div>
+            <div class="items_modal" id="items_modal">
+                <div class="items_modal_con">
+                    <div>
+                        <p class="modal_close">X</p>
+                    </div>
+                    <p class="item_modal_title">11월 24일</p>
+                    <div class="item_modal_content">
+                        <p class="item_modal_memo">오늘은 내 생일이었다. 준규랑 관영이랑 모히또가서 몰디브 한 잔을 하고 집에 왔다.</p>
+                    </div>
                 </div>
             </div>
         </div>

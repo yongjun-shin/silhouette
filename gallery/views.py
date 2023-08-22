@@ -9,7 +9,8 @@ def gallery_view(request):
     bottoms = Clothes.objects.filter(clothes_type='bottom')
     accs = Accessory.objects.all()
     shoeses = Shoes.objects.all()
-    return render(request, 'gallery.html', {'outers' : outers, 'tops' : tops, 'bottoms': bottoms, 'accs': accs, 'shoeses':shoeses})
+    gallerys = Gallery.objects.all()
+    return render(request, 'gallery.html', {'outers' : outers, 'tops' : tops, 'bottoms': bottoms, 'accs': accs, 'shoeses':shoeses, 'gallerys': gallerys})
 
 def add_gallery(request):
     if request.method == 'POST':

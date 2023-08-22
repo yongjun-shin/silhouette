@@ -20,3 +20,31 @@ closeBtn.addEventListener("click", e => {
     modal.style.display = "none"
 });
 
+
+const itemModal = document.getElementById('items_modal');
+const closeItemModal = itemModal.querySelector('.modal_close');
+const div = document.getElementById('items');
+
+document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('#items');
+    const title = itemModal.querySelector('.item_modal_title');
+    const memo = itemModal.querySelector('.item_modal_memo');
+
+    items.forEach(function(items) {
+        items.addEventListener('click', function() {
+            const itemTitle = this.dataset.itemTitle;
+            const itemMemo = this.dataset.itemMemo;
+            title.textContent = itemTitle;
+            memo.textContent = itemMemo;
+            itemModal.style.display = 'block';
+        });
+    });
+});
+
+div.addEventListener('click', () => {
+    itemModal.style.display = 'block';
+});
+
+closeItemModal.addEventListener('click', () => {
+    itemModal.style.display = 'none';
+});
