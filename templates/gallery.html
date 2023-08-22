@@ -11,8 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=PT+Sans&family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="icon" href="{% static 'imgs/logo.ico' %}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}">
+    <script>
+        // JavaScript로 CSRF 토큰을 가져와서 변수에 저장
+        const csrfToken = getCookie('csrftoken');
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
 </head>
 <body>
+    <header>
+        <script>
+            window.csrfToken = csrfToken;
+        </script>
+    </header>
     <div class="container">
         <div class="first">
             <div>
@@ -74,7 +89,7 @@
                             </div>
                             {% for gallery in gallerys %}
                                 <div class="items_con">
-                                    <div class="items" id="items" data-item-title="{{ gallery.title }}" data-item-memo="{{ gallery.memo }}">
+                                    <div class="items" id="items" data-item-title="{{ gallery.title }}" data-item-memo="{{ gallery.memo }}" data-item-id="{{ gallery.id }}">
                                         <div>
                                             <p>Outer : {{ gallery.outer }}</p>
                                             <p>Top : {{ gallery.top }}</p>
@@ -173,6 +188,9 @@
                     <p class="item_modal_title">11월 24일</p>
                     <div class="item_modal_content">
                         <p class="item_modal_memo">오늘은 내 생일이었다. 준규랑 관영이랑 모히또가서 몰디브 한 잔을 하고 집에 왔다.</p>
+                    </div>
+                    <div class="item_modal_btn">
+                        <button class="item_modal_del" id="item_modal_del" >Delete</button>
                     </div>
                 </div>
             </div>

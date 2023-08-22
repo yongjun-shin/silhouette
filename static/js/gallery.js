@@ -29,14 +29,36 @@ document.addEventListener('DOMContentLoaded', function() {
     const items = document.querySelectorAll('#items');
     const title = itemModal.querySelector('.item_modal_title');
     const memo = itemModal.querySelector('.item_modal_memo');
+    const delBtn = document.querySelectorAll('#item_modal_del');  // const delBtn = document.getElementById('item_modal_del');
+
+    
 
     items.forEach(function(items) {
         items.addEventListener('click', function() {
             const itemTitle = this.dataset.itemTitle;
             const itemMemo = this.dataset.itemMemo;
+            const itemId = this.dataset.itemId;
+
             title.textContent = itemTitle;
             memo.textContent = itemMemo;
             itemModal.style.display = 'block';
+
+
+            delBtn.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    fetch(`/gallery/del_gallery/${itemId}/`, {
+                        method: 'DELETE',
+                        headers: {
+                            'X-CSRFToken': window.csrfToken,
+                        },
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            location.reload();
+                        }
+                    });
+                });
+            });
         });
     });
 });

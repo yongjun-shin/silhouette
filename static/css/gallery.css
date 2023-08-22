@@ -304,10 +304,25 @@ body {
 .items_modal .items_modal_con .item_modal_content > p {
     margin: 0px;
     width: 600px;
+    height: 500px;
 }
 .items_modal .items_modal_con .modal_close {
     cursor: pointer;
     float: right;
     padding-right: 10px;
     font-size: 25px;
+}
+.items_modal .items_modal_con .item_modal_btn {
+    display: flex;
+    justify-content: center;
+}
+.items_modal .items_modal_con .item_modal_del {
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+    color: #353434;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    background: #D9D9D9;
 }

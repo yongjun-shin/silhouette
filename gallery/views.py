@@ -33,13 +33,13 @@ def add_gallery(request):
         return redirect('/gallery/')
     return render(request, 'gallery.html') 
 
-# def del_gallery(request, item_id):
-#     if request.method == 'DELETE':
-#         try:
-#             clothes = Clothes.objects.get(pk=item_id)
-#             clothes.delete()
-#             return redirect('/closet/clothes/')
-#         except Clothes.DoesNotExist:
-#             print("You Can't Delete")
+def del_gallery(request, item_id):
+    if request.method == 'DELETE':
+        try:
+            gallery = Gallery.objects.get(pk=item_id)
+            gallery.delete()
+            return redirect('/gallery/')
+        except Gallery.DoesNotExist:
+            print("You Can't Delete")
 
-#     return render(request, 'clothes.html')
+    return render(request, 'gallery.html')
