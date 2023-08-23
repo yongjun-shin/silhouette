@@ -142,6 +142,7 @@ body {
     height: 650px;  
     border-radius: 20px;
     background: rgba(217, 217, 217, 0.80);
+    overflow-y: auto;
 }
 .second .clothes .inner2 .inner_box .contents {
     display: flex;

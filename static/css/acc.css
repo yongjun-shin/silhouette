@@ -133,6 +133,7 @@ body {
     height: 750px;  
     border-radius: 20px;
     background: rgba(217, 217, 217, 0.80);
+    overflow-y: auto;
 }
 .second .acc .inner2 .inner_box .contents {
     display: flex;
