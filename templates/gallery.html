@@ -84,8 +84,12 @@
                     </div>
                     <div class="container">
                         <div class="line">
-                            <div class="add" id="add">
-                                <img src="{% static 'imgs/add.svg' %}" />
+                            <div class="items_con"> 
+                                <div class="items" id="add">
+                                    <div class="img_con">
+                                        <img src="{% static 'imgs/add.svg' %}" />
+                                    </div>
+                                </div>
                             </div>
                             {% for gallery in gallerys %}
                                 <div class="items_con">
